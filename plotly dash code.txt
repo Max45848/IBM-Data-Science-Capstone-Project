@@ -71,7 +71,6 @@ def get_pie_chart(entered_site):
         # return the outcomes piechart for a selected site
         selected_df = spacex_df.loc[spacex_df['Launch Site'] == entered_site]
         fig = px.pie(data_frame = selected_df,
-                     values='class',
                      names='class',
                      title='Total Launches for selected site')
     return fig
@@ -103,4 +102,5 @@ def update_graph(entered_site, payload_slider):
 
 # Run the app
 if __name__ == '__main__':
+
     app.run()
